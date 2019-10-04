@@ -29,5 +29,21 @@ namespace WordCounter.Models
                 }
             }
         }
+
+        public void Results(RepeatCounter newRepeat)
+        {
+            if (newRepeat.WordCount == 1)
+            {
+                Console.WriteLine("The word " + newRepeat.UserWord + " is in your sentence " + newRepeat.WordCount + " time.");
+            }
+            else if (newRepeat.WordCount == 0)
+            {
+                Console.WriteLine("Sorry, we couldn't find any instances of " + newRepeat.UserWord + " in your sentence.");
+            }
+            else
+            {
+                Console.WriteLine("The word " + newRepeat.UserWord + " is in your sentence " + newRepeat.WordCount + " times.");
+            }
+        }
     }
 }
