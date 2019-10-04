@@ -18,7 +18,7 @@ namespace WordCounter.Models
 
         public void CountWord()
         {
-            char[] delimiterChars = { ' ', ',', '.', ':', '!', '?' };
+            char[] delimiterChars = { ' ', ',', '.', ':', ';', '-', '!', '?' };
             string[] wordArray = UserString.Split(delimiterChars);
 
             for (int i = 0; i < wordArray.Length; i++)
@@ -43,6 +43,18 @@ namespace WordCounter.Models
             else
             {
                 Console.WriteLine("The word " + newRepeat.UserWord + " is in your sentence " + newRepeat.WordCount + " times.");
+            }
+
+            Console.WriteLine("Would you like to enter a new sentence? [Enter Yes or No]");
+            string playAgain = Console.ReadLine();
+
+            if (char.ToLower(playAgain[0]) == 'y')
+            {
+            
+            }
+            else if ((char.ToLower(playAgain[0]) == 'n'))
+            {
+
             }
         }
     }

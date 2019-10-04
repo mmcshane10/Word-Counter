@@ -7,6 +7,7 @@ namespace WordCounter
     {
         static void Main()
         {
+            Console.Clear();
             Console.Write("Please enter a sentence:");
             string userString = Console.ReadLine();
             Console.Write("Enter the word you'd like to count:");
