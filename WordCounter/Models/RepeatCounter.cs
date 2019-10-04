@@ -18,7 +18,8 @@ namespace WordCounter.Models
 
         public void CountWord()
         {
-            string[] wordArray = UserString.ToLower().Split(" ");
+            char[] delimiterChars = { ' ', ',', '.', ':', '!', '?' };
+            string[] wordArray = UserString.ToLower().Split(delimiterChars);
 
             for (int i = 0; i < wordArray.Length; i++)
             {
