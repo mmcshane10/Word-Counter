@@ -11,19 +11,19 @@ namespace WordCounter.Models
 
         public RepeatCounter(string userString, string userWord)
         {
-            UserString = userString;
-            UserWord = userWord;
+            UserString = userString.ToLower();
+            UserWord = userWord.ToLower();
             WordCount = 0;
         }
 
         public void CountWord()
         {
             char[] delimiterChars = { ' ', ',', '.', ':', '!', '?' };
-            string[] wordArray = UserString.ToLower().Split(delimiterChars);
+            string[] wordArray = UserString.Split(delimiterChars);
 
             for (int i = 0; i < wordArray.Length; i++)
             {
-                if (wordArray[i] == UserWord.ToLower())
+                if (wordArray[i] == UserWord)
                 {
                     WordCount += 1;
                 }
