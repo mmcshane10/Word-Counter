@@ -57,5 +57,18 @@ namespace WordCounter.Tests
             int output = newRepeat.WordCount;
             Assert.AreEqual(4, output);
         }
+
+        [TestMethod]
+        public void CountWord_CountsPlurals_Two()
+        {
+            string userString = "This cat is one of my favorite cats ever.";
+            string userWord = "cat";
+
+            RepeatCounter newRepeat = new RepeatCounter(userString, userWord);
+
+            newRepeat.CountWord();
+            int output = newRepeat.WordCount;
+            Assert.AreEqual(2, output);
+        }
     }
 }

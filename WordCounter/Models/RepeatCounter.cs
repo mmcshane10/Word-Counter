@@ -34,12 +34,24 @@ namespace WordCounter.Models
         {
             char[] delimiterChars = { ' ', ',', '.', ':', ';', '-', '!', '?' };
             string[] wordArray = UserString.Split(delimiterChars);
+            string pluralChecker = UserWord + "s";
 
             for (int i = 0; i < wordArray.Length; i++)
             {
                 if (wordArray[i] == UserWord)
                 {
                     WordCount += 1;
+                }
+            }
+
+            if (UserWord.Length > 1)
+            {
+                for (int i = 0; i < wordArray.Length; i++)
+                {
+                    if (wordArray[i] == pluralChecker || wordArray[i] + "s" == UserWord)
+                    {
+                        WordCount += 1;
+                    }
                 }
             }
         }

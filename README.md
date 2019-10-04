@@ -32,7 +32,13 @@ This is the second test to see if the method will ignore partial matches of the 
 |:------|:---------:|:------:|
 | It counts multiple matches of the submitted word | "one cat, two cat, red cat, blue cat." | "4" |
 
-The final test ensures the method will count multiple instances of the key word.
+This test ensures the method will count multiple instances of the key word.
+
+| Behavior | Input | Output|
+|:------|:---------:|:------:|
+| It counts words that follow basic plural structure | "This cat is one of my favorite cats ever." | "2" |
+
+The final test adds plurals to the key word count. Only handles plurals that follow the basic 'word' + 's' convention.
 
 
 ## Setup/Installation Requirements_
