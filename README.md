@@ -43,7 +43,7 @@ The final test adds plurals to the key word count. Only handles plurals that fol
 
 ## Setup/Installation Requirements_
 
-* _Clone this repository_
+* _Clone this repository from https://github.com/mmcshane10/Word-Counter_
 * _Navigate to the directory_
 * _Run "dotnet run" command to open application in the command console_
 
@@ -53,7 +53,7 @@ _N/A_
 
 ## Support and contact details
 
-_Google_
+mmcshane10@gmail.com
 
 ## Technologies Used
 
