@@ -19,5 +19,18 @@ namespace WordCounter.Tests
         Assert.AreEqual(1, output);
         }
 
+        [TestMethod]
+        public void CountWord_SkipsPartialMatches_One()
+        {
+            string userString = "The cat is a caterer";
+            string userWord = "cat";
+
+            RepeatCounter newRepeat = new RepeatCounter(userString, userWord);
+
+            newRepeat.CountWord();
+            int output = newRepeat.WordCount;
+            Assert.AreEqual(1, output);
+        }
+
     }
 }
