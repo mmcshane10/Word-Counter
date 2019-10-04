@@ -7,20 +7,7 @@ namespace WordCounter
     {
         static void Main()
         {
-            Console.Clear();
-            Console.Write("Please enter a sentence:");
-            string userString = Console.ReadLine();
-            Console.Write("Enter the word you'd like to count:");
-            string userWord = Console.ReadLine();
-
-            RepeatCounter newRepeat = new RepeatCounter(userString, userWord);
-            newRepeat.CountWord();
-            newRepeat.Results(newRepeat);
-
-            
-            
-        
-
+            RepeatCounter.InitApp();
         }
 
     }

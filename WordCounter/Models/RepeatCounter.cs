@@ -16,6 +16,20 @@ namespace WordCounter.Models
             WordCount = 0;
         }
 
+        public static void InitApp()
+        {
+            Console.Clear();
+            Console.Write("Please enter a sentence:");
+            string userString = Console.ReadLine();
+            Console.Write("Enter the word you'd like to count:");
+            string userWord = Console.ReadLine();
+
+            RepeatCounter newRepeat = new RepeatCounter(userString, userWord);
+
+            newRepeat.CountWord();
+            newRepeat.Results(newRepeat);
+        }
+
         public void CountWord()
         {
             char[] delimiterChars = { ' ', ',', '.', ':', ';', '-', '!', '?' };
@@ -32,6 +46,8 @@ namespace WordCounter.Models
 
         public void Results(RepeatCounter newRepeat)
         {
+            Console.Clear();
+
             if (newRepeat.WordCount == 1)
             {
                 Console.WriteLine("The word " + newRepeat.UserWord + " is in your sentence " + newRepeat.WordCount + " time.");
@@ -45,16 +61,18 @@ namespace WordCounter.Models
                 Console.WriteLine("The word " + newRepeat.UserWord + " is in your sentence " + newRepeat.WordCount + " times.");
             }
 
-            Console.WriteLine("Would you like to enter a new sentence? [Enter Yes or No]");
-            string playAgain = Console.ReadLine();
-
-            if (char.ToLower(playAgain[0]) == 'y')
+            Console.WriteLine("=========================================");
+            Console.WriteLine("Please enter one of the numbers below:");
+            Console.WriteLine("1. Check another word in my sentence.");
+            Console.WriteLine("2. Start over with a new sentence.");
+            string userChoice = Console.ReadLine();
+            if (userChoice == "1")
             {
-            
+                // CheckAnother();
             }
-            else if ((char.ToLower(playAgain[0]) == 'n'))
+            else if (userChoice == "2")
             {
-
+                RepeatCounter.InitApp();
             }
         }
     }
