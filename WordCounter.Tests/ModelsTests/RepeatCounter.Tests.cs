@@ -20,6 +20,19 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
+        public void CountWord_CanHandleCapitalizedSpellings_One()
+        {
+            string userString = "The Cat is old";
+            string userWord = "cat";
+
+            RepeatCounter newRepeat = new RepeatCounter(userString, userWord);
+
+            newRepeat.CountWord();
+            int output = newRepeat.WordCount;
+            Assert.AreEqual(1, output);
+        }
+
+        [TestMethod]
         public void CountWord_SkipsPartialMatches_One()
         {
             string userString = "The cat is a caterer";

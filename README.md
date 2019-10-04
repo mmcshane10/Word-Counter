@@ -18,6 +18,12 @@ This is the first test to see if the method can count the key word in a sentence
 
 | Behavior | Input | Output|
 |:------|:---------:|:------:|
+| It can count the key word whether it is uppercase or lowercase | "cat", "the Cat is old" | "1" |
+
+This test makes sure the inputed user string and user key word are transformed to all lowercase when compared.
+
+| Behavior | Input | Output|
+|:------|:---------:|:------:|
 | It will not count partial matches | "cat", "the cat is a caterer" | "1" |
 
 This is the second test to see if the method will ignore partial matches of the key word.
