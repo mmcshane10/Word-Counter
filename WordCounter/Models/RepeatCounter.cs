@@ -9,11 +9,24 @@ namespace WordCounter.Models
         public string UserWord { get; set; }
         public int WordCount { get; set; }
 
-        public RepeatCounter(string userString, string userWord, int WordCount)
+        public RepeatCounter(string userString, string userWord)
         {
             UserString = userString;
             UserWord = userWord;
             WordCount = 0;
+        }
+
+        public void CountWord()
+        {
+            string[] wordArray = UserString.ToLower().Split(" ");
+
+            for (int i = 0; i < wordArray.Length; i++)
+            {
+                if (wordArray[i] == UserWord.ToLower())
+                {
+                    WordCount += 1;
+                }
+            }
         }
     }
 }

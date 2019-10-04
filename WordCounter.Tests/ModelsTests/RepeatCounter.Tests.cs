@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FindAndReplace.Models;
+using WordCounter.Models;
 
 namespace WordCounter.Tests
 {
@@ -7,6 +7,8 @@ namespace WordCounter.Tests
     public class RepeatCounterTests
     {
         [TestMethod]
+        public void CountWord_CountInstancesofWord_One()
+        {
         string userString = "The cat is old";
         string userWord = "cat";
 
@@ -15,6 +17,7 @@ namespace WordCounter.Tests
         newRepeat.CountWord();
         int output = newRepeat.WordCount;
         Assert.AreEqual(1, output);
+        }
 
     }
 }
