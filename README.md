@@ -13,8 +13,20 @@ _A console application that counts the number of times a specific word appears i
 | Behavior | Input | Output|
 |:------|:---------:|:------:|
 | It counts the number of times a specific word is used. | "cat", "the cat is old" | "1" |
+
+This is the first test to see if the method can count the key word in a sentence with no punctuation.
+
+| Behavior | Input | Output|
+|:------|:---------:|:------:|
 | It will not count partial matches | "cat", "the cat is a caterer" | "1" |
+
+This is the second test to see if the method will ignore partial matches of the key word.
+
+| Behavior | Input | Output|
+|:------|:---------:|:------:|
 | It counts multiple matches of the submitted word | "one cat, two cat, red cat, blue cat." | "4" |
+
+The final test ensures the method will count multiple instances of the key word.
 
 
 ## Setup/Installation Requirements_
