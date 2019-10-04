@@ -44,6 +44,16 @@ namespace WordCounter.Models
             }
         }
 
+        public void CheckAnother(RepeatCounter newRepeat)
+        {
+            Console.Write("Enter the word you'd like to count:");
+            string newUserWord = Console.ReadLine();
+            newRepeat.UserWord = newUserWord;
+            newRepeat.WordCount = 0;
+            newRepeat.CountWord();
+            newRepeat.Results(newRepeat);
+        }
+
         public void Results(RepeatCounter newRepeat)
         {
             Console.Clear();
@@ -65,14 +75,19 @@ namespace WordCounter.Models
             Console.WriteLine("Please enter one of the numbers below:");
             Console.WriteLine("1. Check another word in my sentence.");
             Console.WriteLine("2. Start over with a new sentence.");
+            Console.WriteLine("3. Exit Application.");
             string userChoice = Console.ReadLine();
             if (userChoice == "1")
             {
-                // CheckAnother();
+                CheckAnother(newRepeat);
             }
             else if (userChoice == "2")
             {
                 RepeatCounter.InitApp();
+            }
+            else
+            {
+                Environment.Exit(0);
             }
         }
     }
